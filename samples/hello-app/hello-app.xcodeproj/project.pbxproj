@@ -22,6 +22,8 @@
 		4384056D186DB82E009CCB85 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4384054C186DB82E009CCB85 /* UIKit.framework */; };
 		43840575186DB82E009CCB85 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 43840573186DB82E009CCB85 /* InfoPlist.strings */; };
 		43840577186DB82E009CCB85 /* hello_appTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 43840576186DB82E009CCB85 /* hello_appTests.m */; };
+		43840582186DB96A009CCB85 /* libhello-lib.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 43840581186DB96A009CCB85 /* libhello-lib.a */; };
+		43840587186DC700009CCB85 /* libc++.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 43840583186DC205009CCB85 /* libc++.dylib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -55,6 +57,10 @@
 		43840572186DB82E009CCB85 /* hello-appTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "hello-appTests-Info.plist"; sourceTree = "<group>"; };
 		43840574186DB82E009CCB85 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		43840576186DB82E009CCB85 /* hello_appTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = hello_appTests.m; sourceTree = "<group>"; };
+		43840580186DB96A009CCB85 /* HelloIOS.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HelloIOS.h; sourceTree = "<group>"; };
+		43840581186DB96A009CCB85 /* libhello-lib.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = "libhello-lib.a"; sourceTree = "<group>"; };
+		43840583186DC205009CCB85 /* libc++.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = "libc++.dylib"; path = "usr/lib/libc++.dylib"; sourceTree = SDKROOT; };
+		43840585186DC39E009CCB85 /* libstdc++.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = "libstdc++.dylib"; path = "usr/lib/libstdc++.dylib"; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -62,6 +68,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				43840587186DC700009CCB85 /* libc++.dylib in Frameworks */,
+				43840582186DB96A009CCB85 /* libhello-lib.a in Frameworks */,
 				4384054B186DB82E009CCB85 /* CoreGraphics.framework in Frameworks */,
 				4384054D186DB82E009CCB85 /* UIKit.framework in Frameworks */,
 				43840549186DB82E009CCB85 /* Foundation.framework in Frameworks */,
@@ -103,6 +111,8 @@
 		43840547186DB82E009CCB85 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				43840585186DC39E009CCB85 /* libstdc++.dylib */,
+				43840583186DC205009CCB85 /* libc++.dylib */,
 				43840548186DB82E009CCB85 /* Foundation.framework */,
 				4384054A186DB82E009CCB85 /* CoreGraphics.framework */,
 				4384054C186DB82E009CCB85 /* UIKit.framework */,
@@ -114,6 +124,8 @@
 		4384054E186DB82E009CCB85 /* hello-app */ = {
 			isa = PBXGroup;
 			children = (
+				43840580186DB96A009CCB85 /* HelloIOS.h */,
+				43840581186DB96A009CCB85 /* libhello-lib.a */,
 				43840557186DB82E009CCB85 /* CRAppDelegate.h */,
 				43840558186DB82E009CCB85 /* CRAppDelegate.m */,
 				4384055A186DB82E009CCB85 /* Main_iPhone.storyboard */,
@@ -393,9 +405,15 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CLANG_CXX_LANGUAGE_STANDARD = "compiler-default";
+				CLANG_CXX_LIBRARY = "compiler-default";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "hello-app/hello-app-Prefix.pch";
 				INFOPLIST_FILE = "hello-app/hello-app-Info.plist";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"/Users/bogdan/Documents/ios-cmake/samples/hello-app/hello-app",
+				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};
@@ -406,9 +424,15 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CLANG_CXX_LANGUAGE_STANDARD = "compiler-default";
+				CLANG_CXX_LIBRARY = "compiler-default";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "hello-app/hello-app-Prefix.pch";
 				INFOPLIST_FILE = "hello-app/hello-app-Info.plist";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"/Users/bogdan/Documents/ios-cmake/samples/hello-app/hello-app",
+				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};

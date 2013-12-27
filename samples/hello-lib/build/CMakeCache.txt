@@ -30,7 +30,7 @@ CMAKE_CXX_COMPILER:FILEPATH=/usr/bin/clang
 CMAKE_CXX_COMPILER_WITH_PATH:FILEPATH=CMAKE_CXX_COMPILER_WITH_PATH-NOTFOUND
 
 //Flags used by the compiler during all build types.
-CMAKE_CXX_FLAGS:STRING= -fvisibility=hidden -fvisibility-inlines-hidden -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator7.0.sdk
+CMAKE_CXX_FLAGS:STRING= -fobjc-abi-version=2 -fobjc-arc -fvisibility=hidden -fvisibility-inlines-hidden -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator7.0.sdk
 
 //Flags used by the compiler during debug builds.
 CMAKE_CXX_FLAGS_DEBUG:STRING=

@@ -7,8 +7,10 @@
 //
 
 #import "CRViewController.h"
+#import "HelloIOS.h"
 
 @interface CRViewController ()
+@property (weak, nonatomic) IBOutlet UILabel *helloMsg;
 
 @end
 
@@ -18,6 +20,8 @@
 {
     [super viewDidLoad];
 	// Do any additional setup after loading the view, typically from a nib.
+    HelloIOS *hello = [HelloIOS new];
+    self.helloMsg.text = [hello getHello];
 }
 
 - (void)didReceiveMemoryWarning
