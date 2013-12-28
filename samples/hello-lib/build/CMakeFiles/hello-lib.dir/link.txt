@@ -1,1 +1,0 @@
-ar cr libhello-lib.a  CMakeFiles/hello-lib.dir/HelloWorld.cpp.o CMakeFiles/hello-lib.dir/HelloIOS.mm.o

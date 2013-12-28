@@ -1,1 +1,0 @@
-/Users/bogdan/Documents/ios-cmake/samples/hello-lib/build/CMakeFiles/hello-lib.dir
