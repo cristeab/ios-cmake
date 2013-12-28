@@ -17,6 +17,8 @@ set (HDR
 	HelloIOS.h
 )
 
+set(CMAKE_LINK_FLAGS "${CMAKE_LINK_FLAGS} -fobjc-abi-version=2 -fobjc-arc  -isysroot ${CMAKE_OSX_SYSROOT}")
+
 # Library
 add_library (hello-lib STATIC ${SRC} ${HDR})
 set_xcode_property (hello-lib GCC_GENERATE_DEBUGGING_SYMBOLS YES)

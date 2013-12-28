@@ -23,7 +23,7 @@
 		43840575186DB82E009CCB85 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 43840573186DB82E009CCB85 /* InfoPlist.strings */; };
 		43840577186DB82E009CCB85 /* hello_appTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 43840576186DB82E009CCB85 /* hello_appTests.m */; };
 		43840582186DB96A009CCB85 /* libhello-lib.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 43840581186DB96A009CCB85 /* libhello-lib.a */; };
-		43840587186DC700009CCB85 /* libc++.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 43840583186DC205009CCB85 /* libc++.dylib */; };
+		43E1CFF0186EFF7200E262FA /* libstdc++.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 43E1CFEF186EFF7200E262FA /* libstdc++.dylib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -59,8 +59,7 @@
 		43840576186DB82E009CCB85 /* hello_appTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = hello_appTests.m; sourceTree = "<group>"; };
 		43840580186DB96A009CCB85 /* HelloIOS.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HelloIOS.h; sourceTree = "<group>"; };
 		43840581186DB96A009CCB85 /* libhello-lib.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = "libhello-lib.a"; sourceTree = "<group>"; };
-		43840583186DC205009CCB85 /* libc++.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = "libc++.dylib"; path = "usr/lib/libc++.dylib"; sourceTree = SDKROOT; };
-		43840585186DC39E009CCB85 /* libstdc++.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = "libstdc++.dylib"; path = "usr/lib/libstdc++.dylib"; sourceTree = SDKROOT; };
+		43E1CFEF186EFF7200E262FA /* libstdc++.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = "libstdc++.dylib"; path = "usr/lib/libstdc++.dylib"; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -68,7 +67,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				43840587186DC700009CCB85 /* libc++.dylib in Frameworks */,
+				43E1CFF0186EFF7200E262FA /* libstdc++.dylib in Frameworks */,
 				43840582186DB96A009CCB85 /* libhello-lib.a in Frameworks */,
 				4384054B186DB82E009CCB85 /* CoreGraphics.framework in Frameworks */,
 				4384054D186DB82E009CCB85 /* UIKit.framework in Frameworks */,
@@ -111,8 +110,7 @@
 		43840547186DB82E009CCB85 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				43840585186DC39E009CCB85 /* libstdc++.dylib */,
-				43840583186DC205009CCB85 /* libc++.dylib */,
+				43E1CFEF186EFF7200E262FA /* libstdc++.dylib */,
 				43840548186DB82E009CCB85 /* Foundation.framework */,
 				4384054A186DB82E009CCB85 /* CoreGraphics.framework */,
 				4384054C186DB82E009CCB85 /* UIKit.framework */,
@@ -499,6 +497,7 @@
 				4384057C186DB82E009CCB85 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		4384057D186DB82E009CCB85 /* Build configuration list for PBXNativeTarget "hello-appTests" */ = {
 			isa = XCConfigurationList;
@@ -507,6 +506,7 @@
 				4384057F186DB82E009CCB85 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
