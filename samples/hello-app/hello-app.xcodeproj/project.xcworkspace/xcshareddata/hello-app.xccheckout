@@ -5,36 +5,36 @@
 	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
 	<false/>
 	<key>IDESourceControlProjectIdentifier</key>
-	<string>A1072FC2-6844-4BFF-99E2-2F7C73A201BD</string>
+	<string>265476A8-EF4C-4517-B6B0-BA4D20480080</string>
 	<key>IDESourceControlProjectName</key>
 	<string>hello-app</string>
 	<key>IDESourceControlProjectOriginsDictionary</key>
 	<dict>
-		<key>BD0DABB6-C1E9-4BA0-8632-C1ABEC752092</key>
-		<string>https://github.com/cristeab/ios-cmake.git</string>
+		<key>657C1EFA-67BD-422C-98B0-CC970EECE5DD</key>
+		<string>https://github.com/jackfengji/ios-cmake.git</string>
 	</dict>
 	<key>IDESourceControlProjectPath</key>
 	<string>samples/hello-app/hello-app.xcodeproj/project.xcworkspace</string>
 	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
 	<dict>
-		<key>BD0DABB6-C1E9-4BA0-8632-C1ABEC752092</key>
+		<key>657C1EFA-67BD-422C-98B0-CC970EECE5DD</key>
 		<string>../../../..</string>
 	</dict>
 	<key>IDESourceControlProjectURL</key>
-	<string>https://github.com/cristeab/ios-cmake.git</string>
+	<string>https://github.com/jackfengji/ios-cmake.git</string>
 	<key>IDESourceControlProjectVersion</key>
 	<integer>110</integer>
 	<key>IDESourceControlProjectWCCIdentifier</key>
-	<string>BD0DABB6-C1E9-4BA0-8632-C1ABEC752092</string>
+	<string>657C1EFA-67BD-422C-98B0-CC970EECE5DD</string>
 	<key>IDESourceControlProjectWCConfigurations</key>
 	<array>
 		<dict>
 			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
 			<string>public.vcs.git</string>
 			<key>IDESourceControlWCCIdentifierKey</key>
-			<string>BD0DABB6-C1E9-4BA0-8632-C1ABEC752092</string>
+			<string>657C1EFA-67BD-422C-98B0-CC970EECE5DD</string>
 			<key>IDESourceControlWCCName</key>
-			<string>hello-app</string>
+			<string>ios-cmake</string>
 		</dict>
 	</array>
 </dict>
