@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1865ED69191B8B9100665F5D /* libc++.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 1865ED60191B8AFC00665F5D /* libc++.dylib */; };
+		188955BB191B251A0099B3BA /* libhello-lib.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 188955BA191B251A0099B3BA /* libhello-lib.a */; };
 		43840549186DB82E009CCB85 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 43840548186DB82E009CCB85 /* Foundation.framework */; };
 		4384054B186DB82E009CCB85 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4384054A186DB82E009CCB85 /* CoreGraphics.framework */; };
 		4384054D186DB82E009CCB85 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4384054C186DB82E009CCB85 /* UIKit.framework */; };
@@ -22,8 +24,6 @@
 		4384056D186DB82E009CCB85 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4384054C186DB82E009CCB85 /* UIKit.framework */; };
 		43840575186DB82E009CCB85 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 43840573186DB82E009CCB85 /* InfoPlist.strings */; };
 		43840577186DB82E009CCB85 /* hello_appTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 43840576186DB82E009CCB85 /* hello_appTests.m */; };
-		43840582186DB96A009CCB85 /* libhello-lib.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 43840581186DB96A009CCB85 /* libhello-lib.a */; };
-		43E1CFF0186EFF7200E262FA /* libstdc++.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 43E1CFEF186EFF7200E262FA /* libstdc++.dylib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -37,6 +37,11 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		1865ED60191B8AFC00665F5D /* libc++.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = "libc++.dylib"; path = "usr/lib/libc++.dylib"; sourceTree = SDKROOT; };
+		1865ED62191B8B4300665F5D /* libc++.1.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = "libc++.1.dylib"; path = "usr/lib/libc++.1.dylib"; sourceTree = SDKROOT; };
+		1865ED65191B8B5200665F5D /* libstdc++.6.0.9.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = "libstdc++.6.0.9.dylib"; path = "usr/lib/libstdc++.6.0.9.dylib"; sourceTree = SDKROOT; };
+		1865ED67191B8B5800665F5D /* libstdc++.6.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = "libstdc++.6.dylib"; path = "usr/lib/libstdc++.6.dylib"; sourceTree = SDKROOT; };
+		188955BA191B251A0099B3BA /* libhello-lib.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = "libhello-lib.a"; sourceTree = "<group>"; };
 		43840545186DB82E009CCB85 /* hello-app.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "hello-app.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		43840548186DB82E009CCB85 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		4384054A186DB82E009CCB85 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -58,7 +63,6 @@
 		43840574186DB82E009CCB85 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		43840576186DB82E009CCB85 /* hello_appTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = hello_appTests.m; sourceTree = "<group>"; };
 		43840580186DB96A009CCB85 /* HelloIOS.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HelloIOS.h; sourceTree = "<group>"; };
-		43840581186DB96A009CCB85 /* libhello-lib.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = "libhello-lib.a"; sourceTree = "<group>"; };
 		43E1CFEF186EFF7200E262FA /* libstdc++.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = "libstdc++.dylib"; path = "usr/lib/libstdc++.dylib"; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
@@ -67,8 +71,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				43E1CFF0186EFF7200E262FA /* libstdc++.dylib in Frameworks */,
-				43840582186DB96A009CCB85 /* libhello-lib.a in Frameworks */,
+				1865ED69191B8B9100665F5D /* libc++.dylib in Frameworks */,
+				188955BB191B251A0099B3BA /* libhello-lib.a in Frameworks */,
 				4384054B186DB82E009CCB85 /* CoreGraphics.framework in Frameworks */,
 				4384054D186DB82E009CCB85 /* UIKit.framework in Frameworks */,
 				43840549186DB82E009CCB85 /* Foundation.framework in Frameworks */,
@@ -110,6 +114,10 @@
 		43840547186DB82E009CCB85 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				1865ED67191B8B5800665F5D /* libstdc++.6.dylib */,
+				1865ED65191B8B5200665F5D /* libstdc++.6.0.9.dylib */,
+				1865ED62191B8B4300665F5D /* libc++.1.dylib */,
+				1865ED60191B8AFC00665F5D /* libc++.dylib */,
 				43E1CFEF186EFF7200E262FA /* libstdc++.dylib */,
 				43840548186DB82E009CCB85 /* Foundation.framework */,
 				4384054A186DB82E009CCB85 /* CoreGraphics.framework */,
@@ -122,8 +130,8 @@
 		4384054E186DB82E009CCB85 /* hello-app */ = {
 			isa = PBXGroup;
 			children = (
+				188955BA191B251A0099B3BA /* libhello-lib.a */,
 				43840580186DB96A009CCB85 /* HelloIOS.h */,
-				43840581186DB96A009CCB85 /* libhello-lib.a */,
 				43840557186DB82E009CCB85 /* CRAppDelegate.h */,
 				43840558186DB82E009CCB85 /* CRAppDelegate.m */,
 				4384055A186DB82E009CCB85 /* Main_iPhone.storyboard */,
@@ -210,7 +218,7 @@
 			isa = PBXProject;
 			attributes = {
 				CLASSPREFIX = CR;
-				LastUpgradeCheck = 0500;
+				LastUpgradeCheck = 0510;
 				ORGANIZATIONNAME = "Bogdan Cristea";
 				TargetAttributes = {
 					43840568186DB82E009CCB85 = {
@@ -328,7 +336,6 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
-				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_MODULES = YES;
@@ -368,7 +375,6 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
-				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_MODULES = YES;
@@ -392,6 +398,7 @@
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VALIDATE_PRODUCT = YES;
@@ -410,7 +417,7 @@
 				INFOPLIST_FILE = "hello-app/hello-app-Info.plist";
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
-					"/Users/bogdan/Documents/ios-cmake/samples/hello-app/hello-app",
+					"$(PROJECT_DIR)/hello-app",
 				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
@@ -429,7 +436,7 @@
 				INFOPLIST_FILE = "hello-app/hello-app-Info.plist";
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
-					"/Users/bogdan/Documents/ios-cmake/samples/hello-app/hello-app",
+					"$(PROJECT_DIR)/hello-app",
 				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
@@ -439,7 +446,6 @@
 		4384057E186DB82E009CCB85 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
 				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/hello-app.app/hello-app";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(SDKROOT)/Developer/Library/Frameworks",
@@ -462,7 +468,6 @@
 		4384057F186DB82E009CCB85 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
 				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/hello-app.app/hello-app";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(SDKROOT)/Developer/Library/Frameworks",
