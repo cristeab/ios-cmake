@@ -126,7 +126,8 @@ endif (${IOS_PLATFORM} STREQUAL "OS")
 
 # Setup iOS developer location unless specified manually with CMAKE_IOS_DEVELOPER_ROOT
 # Note Xcode 4.3 changed the installation location, choose the most recent one available
-set (XCODE_POST_43_ROOT "/Applications/Xcode.app/Contents/Developer/Platforms/${IOS_PLATFORM_LOCATION}/Developer")
+exec_program(/usr/bin/xcode-select ARGS -print-path OUTPUT_VARIABLE CMAKE_XCODE_DEVELOPER_DIR)
+set (XCODE_POST_43_ROOT "${CMAKE_XCODE_DEVELOPER_DIR}/Platforms/${IOS_PLATFORM_LOCATION}/Developer")
 set (XCODE_PRE_43_ROOT "/Developer/Platforms/${IOS_PLATFORM_LOCATION}/Developer")
 if (NOT DEFINED CMAKE_IOS_DEVELOPER_ROOT)
 	if (EXISTS ${XCODE_POST_43_ROOT})
