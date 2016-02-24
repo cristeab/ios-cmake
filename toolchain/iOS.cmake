@@ -156,13 +156,13 @@ set (CMAKE_IOS_SDK_ROOT ${CMAKE_IOS_SDK_ROOT} CACHE PATH "Location of the select
 set (CMAKE_OSX_SYSROOT ${CMAKE_IOS_SDK_ROOT} CACHE PATH "Sysroot used for iOS support")
 
 # set the architecture for iOS 
-if (${IOS_PLATFORM} STREQUAL "OS")
+if (${IOS_PLATFORM} STREQUAL OS)
     set (IOS_ARCH armv7 armv7s arm64)
-elseif (${IOS_PLATFORM} STREQUAL "SIMULATOR")
+elseif (${IOS_PLATFORM} STREQUAL SIMULATOR)
     set (IOS_ARCH i386)
-elseif (${IOS_PLATFORM} STREQUAL "SIMULATOR64")
+elseif (${IOS_PLATFORM} STREQUAL SIMULATOR64)
     set (IOS_ARCH x86_64)
-endif (${IOS_PLATFORM} STREQUAL "OS")
+endif (${IOS_PLATFORM} STREQUAL OS)
 
 set (CMAKE_OSX_ARCHITECTURES ${IOS_ARCH} CACHE string  "Build architecture for iOS")
 
