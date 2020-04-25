@@ -3,7 +3,7 @@ ios-cmake
 
 A toolchain file and examples using cmake for iOS development. This is a fork of a similar project found on https://code.google.com/p/ios-cmake/
 
-Tested with Xcode 11.2.1
+Tested with Xcode 11.4.1
 
 In order to compile the static library for the iOS simulator 64 bits, change to the folder where the library sources reside, then:
 
