@@ -17,6 +17,8 @@
 #   By default this location is automatcially chosen based on the CMAKE_IOS_DEVELOPER_ROOT value.
 #   In this case it will always be the most up-to-date SDK found in the CMAKE_IOS_DEVELOPER_ROOT path.
 #   If set manually, this will force the use of a specific SDK version
+#
+# IOS_BITCODE = 1/0: Enable bitcode or not. Only iOS >= 6.0 device build can enable bitcode. Default is enabled.
 
 # Macros:
 #
@@ -31,9 +33,15 @@
 # Standard settings
 set (CMAKE_SYSTEM_NAME Darwin)
 set (CMAKE_SYSTEM_VERSION 1)
-set (UNIX True)
-set (APPLE True)
-set (IOS True)
+set(CMAKE_CROSSCOMPILING TRUE)
+set (UNIX TRUE)
+set (APPLE TRUE)
+set (IOS TRUE)
+
+if(NOT DEFINED IOS_BITCODE) # check xcode/clang version? since xcode 7
+  set(IOS_BITCODE 1)
+endif()
+set(IOS_BITCODE_MARKER 0)
 
 # Required as of cmake 2.8.10
 set (CMAKE_OSX_DEPLOYMENT_TARGET "" CACHE STRING "Force unset of the deployment target for iOS" FORCE)
@@ -63,14 +71,20 @@ set (CMAKE_SHARED_MODULE_SUFFIX ".so")
 set (CMAKE_MODULE_EXISTS 1)
 set (CMAKE_DL_LIBS "")
 
+if(IOS_BITCODE)
+    set(BITCODE_FLAGS "-fembed-bitcode")
+  elseif(IOS_BITCODE_MARKER)
+    set(BITCODE_FLAGS "-fembed-bitcode-marker")
+  endif()
+
 set (CMAKE_C_OSX_COMPATIBILITY_VERSION_FLAG "-compatibility_version ")
 set (CMAKE_C_OSX_CURRENT_VERSION_FLAG "-current_version ")
 set (CMAKE_CXX_OSX_COMPATIBILITY_VERSION_FLAG "${CMAKE_C_OSX_COMPATIBILITY_VERSION_FLAG}")
 set (CMAKE_CXX_OSX_CURRENT_VERSION_FLAG "${CMAKE_C_OSX_CURRENT_VERSION_FLAG}")
 
 # Hidden visibilty is required for cxx on iOS 
-set (CMAKE_C_FLAGS_INIT "")
-set (CMAKE_CXX_FLAGS_INIT "-fvisibility=hidden -fvisibility-inlines-hidden")
+set (CMAKE_C_FLAGS_INIT "${BITCODE_FLAGS}")
+set (CMAKE_CXX_FLAGS_INIT "-fvisibility=hidden -fvisibility-inlines-hidden ${BITCODE_FLAGS}")
 
 set (CMAKE_C_LINK_FLAGS "-Wl,-search_paths_first ${CMAKE_C_LINK_FLAGS}")
 set (CMAKE_CXX_LINK_FLAGS "-Wl,-search_paths_first ${CMAKE_CXX_LINK_FLAGS}")
@@ -88,18 +102,18 @@ set (CMAKE_FIND_LIBRARY_SUFFIXES ".dylib" ".so" ".a")
 # hardcode CMAKE_INSTALL_NAME_TOOL here to install_name_tool, so it behaves as it did before, Alex
 if (NOT DEFINED CMAKE_INSTALL_NAME_TOOL)
 	find_program(CMAKE_INSTALL_NAME_TOOL install_name_tool)
-endif (NOT DEFINED CMAKE_INSTALL_NAME_TOOL)
+endif ()
 
 # Setup iOS platform unless specified manually with IOS_PLATFORM
 if (NOT DEFINED IOS_PLATFORM)
 	set (IOS_PLATFORM "OS")
-endif (NOT DEFINED IOS_PLATFORM)
+endif ()
 set (IOS_PLATFORM ${IOS_PLATFORM} CACHE STRING "Type of iOS Platform")
 
 # Setup building for arm64 or not
 if (NOT DEFINED BUILD_ARM64)
     set (BUILD_ARM64 true)
-endif (NOT DEFINED BUILD_ARM64)
+endif ()
 set (BUILD_ARM64 ${BUILD_ARM64} CACHE STRING "Build arm64 arch or not")
 
 # Check the platform selection and setup for developer root
@@ -120,9 +134,9 @@ elseif (${IOS_PLATFORM} STREQUAL "SIMULATOR64")
 
 	# This causes the installers to properly locate the output libraries
 	set (CMAKE_XCODE_EFFECTIVE_PLATFORMS "-iphonesimulator")
-else (${IOS_PLATFORM} STREQUAL "OS")
+else ()
 	message (FATAL_ERROR "Unsupported IOS_PLATFORM value selected. Please choose OS or SIMULATOR")
-endif (${IOS_PLATFORM} STREQUAL "OS")
+endif ()
 
 # Setup iOS developer location unless specified manually with CMAKE_IOS_DEVELOPER_ROOT
 # Note Xcode 4.3 changed the installation location, choose the most recent one available
@@ -135,7 +149,7 @@ if (NOT DEFINED CMAKE_IOS_DEVELOPER_ROOT)
 	elseif(EXISTS ${XCODE_PRE_43_ROOT})
 		set (CMAKE_IOS_DEVELOPER_ROOT ${XCODE_PRE_43_ROOT})
 	endif (EXISTS ${XCODE_POST_43_ROOT})
-endif (NOT DEFINED CMAKE_IOS_DEVELOPER_ROOT)
+endif ()
 set (CMAKE_IOS_DEVELOPER_ROOT ${CMAKE_IOS_DEVELOPER_ROOT} CACHE PATH "Location of iOS Platform")
 
 # Find and use the most recent iOS sdk unless specified manually with CMAKE_IOS_SDK_ROOT
@@ -149,7 +163,7 @@ if (NOT DEFINED CMAKE_IOS_SDK_ROOT)
 		message (FATAL_ERROR "No iOS SDK's found in default search path ${CMAKE_IOS_DEVELOPER_ROOT}. Manually set CMAKE_IOS_SDK_ROOT or install the iOS SDK.")
 	endif (_CMAKE_IOS_SDKS)
 	message (STATUS "Toolchain using default iOS SDK: ${CMAKE_IOS_SDK_ROOT}")
-endif (NOT DEFINED CMAKE_IOS_SDK_ROOT)
+endif ()
 set (CMAKE_IOS_SDK_ROOT ${CMAKE_IOS_SDK_ROOT} CACHE PATH "Location of the selected iOS SDK")
 
 # Set the sysroot default to the most recent SDK
@@ -157,7 +171,7 @@ set (CMAKE_OSX_SYSROOT ${CMAKE_IOS_SDK_ROOT} CACHE PATH "Sysroot used for iOS su
 
 # set the architecture for iOS 
 if (${IOS_PLATFORM} STREQUAL "OS")
-    set (IOS_ARCH armv7 armv7s arm64)
+    set (IOS_ARCH arm64)
 elseif (${IOS_PLATFORM} STREQUAL "SIMULATOR")
     set (IOS_ARCH i386)
 elseif (${IOS_PLATFORM} STREQUAL "SIMULATOR64")

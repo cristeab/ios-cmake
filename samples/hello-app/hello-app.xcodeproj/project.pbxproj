@@ -221,6 +221,9 @@
 				LastUpgradeCheck = 1120;
 				ORGANIZATIONNAME = "Bogdan Cristea";
 				TargetAttributes = {
+					43840544186DB82E009CCB85 = {
+						DevelopmentTeam = FAARUB626Q;
+					};
 					43840568186DB82E009CCB85 = {
 						TestTargetID = 43840544186DB82E009CCB85;
 					};
@@ -228,10 +231,9 @@
 			};
 			buildConfigurationList = 43840540186DB82E009CCB85 /* Build configuration list for PBXProject "hello-app" */;
 			compatibilityVersion = "Xcode 3.2";
-			developmentRegion = English;
+			developmentRegion = en;
 			hasScannedForEncodings = 0;
 			knownRegions = (
-				English,
 				en,
 				Base,
 			);
@@ -442,6 +444,7 @@
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CLANG_CXX_LANGUAGE_STANDARD = "compiler-default";
 				CLANG_CXX_LIBRARY = "compiler-default";
+				DEVELOPMENT_TEAM = FAARUB626Q;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "hello-app/hello-app-Prefix.pch";
 				INFOPLIST_FILE = "hello-app/hello-app-Info.plist";
@@ -462,6 +465,7 @@
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CLANG_CXX_LANGUAGE_STANDARD = "compiler-default";
 				CLANG_CXX_LIBRARY = "compiler-default";
+				DEVELOPMENT_TEAM = FAARUB626Q;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "hello-app/hello-app-Prefix.pch";
 				INFOPLIST_FILE = "hello-app/hello-app-Info.plist";
