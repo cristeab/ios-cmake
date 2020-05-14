@@ -5,11 +5,11 @@ A toolchain file and examples using cmake for iOS development. This is a fork of
 
 Tested with Xcode 11.4.1
 
-In order to compile the static library for the iOS simulator 64 bits, change to the folder where the library sources reside, then:
+In order to compile the static library for the iOS simulator (fat file: i386 x86_64), change to the folder where the library sources reside, then:
 
 	mkdir build
 	cd build
- 	cmake .. -DCMAKE_TOOLCHAIN_FILE=../../../toolchain/iOS.cmake -DIOS_PLATFORM=SIMULATOR64
+ 	cmake .. -DCMAKE_TOOLCHAIN_FILE=../../../toolchain/iOS.cmake -DIOS_PLATFORM=SIMULATOR
  	make
  	make install
 
@@ -18,6 +18,4 @@ In order to compile the static library for the iOS simulator 64 bits, change to 
  	open hello-app.xcodeproj
 
 
-Set IOS_PLATFORM to SIMULATOR32 to build for iOS simulator 32 bits
-
-Set IOS_PLATFORM to OS to build for Device
+Set IOS_PLATFORM to OS to build for Device (the generated library is a fat file: armv7 armv7s arm64).
