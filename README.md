@@ -2,7 +2,7 @@ ios-cmake
 =========
 
 “[ios-cmake] is being sponsored by the following tool; please help to support us by taking a look and signing up to a free trial”
-<!--<a href="https://tracking.gitads.io/?repo=ios-cmake"> <img src="https://images.gitads.io/ios-cmake" alt="GitAds"/> </a>-->
+<a href="https://tracking.gitads.io/?repo=ios-cmake"> <img src="https://images.gitads.io/ios-cmake" alt="GitAds"/> </a>
 
 A toolchain file and examples using cmake for iOS development. This is a fork of a similar project found on https://code.google.com/p/ios-cmake/
 
