@@ -93,6 +93,9 @@ set (CMAKE_SHARED_MODULE_LOADER_C_FLAG "-Wl,-bundle_loader,")
 set (CMAKE_SHARED_MODULE_LOADER_CXX_FLAG "-Wl,-bundle_loader,")
 set (CMAKE_FIND_LIBRARY_SUFFIXES ".dylib" ".so" ".a")
 
+set(CMAKE_MACOSX_BUNDLE ON)
+set(CMAKE_XCODE_ATTRIBUTE_CODE_SIGNING_REQUIRED OFF)
+
 # hack: if a new cmake (which uses CMAKE_INSTALL_NAME_TOOL) runs on an old build tree
 # (where install_name_tool was hardcoded) and where CMAKE_INSTALL_NAME_TOOL isn't in the cache
 # and still cmake didn't fail in CMakeFindBinUtils.cmake (because it isn't rerun)
